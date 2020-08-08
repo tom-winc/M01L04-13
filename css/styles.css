@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html, body { 
+    background-color: #d5e7c5;
+    color: #56674a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    line-height: 1.5em;
+    height: 100%
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 5fr 3fr 1fr;
+    grid-gap: 3px;
+}
+
+.container > div:nth-child(1n) {
+    background-color: #66A7F2;	
+  }
+  
+  .container > div:nth-child(2n) {
+    background-color: #83BD54;
+  }
+  
+  .container > div:nth-child(3n) {
+        background-color: #a871db;
+  }
+  
+  .container > div:nth-child(4n) {
+        background-color: #2766b9;
+  }
+
+
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 269px auto;
+        grid-template-rows: 6fr 3fr 1fr;
+    }
+    
+    .container > .site-header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+} 
+
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 269px auto 269px;
+        grid-template-rows: 6fr 3fr 1fr;
+    }
+    
+    .container > .site-header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .container > .site-main {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .container > .widget-area {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+
+} 
